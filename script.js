@@ -12,87 +12,44 @@ basla.addEventListener("click", () => {
         site.style.display = "block";
 
         site.animate([
-            {opacity:0, transform:"translateY(40px)"},
-            {opacity:1, transform:"translateY(0)"}
-        ],{
-            duration:1000,
-            fill:"forwards"
-        });
-setTimeout(() => {
-
-    window.scrollTo({
-        top: 300,
-        behavior: "smooth"
-    });
-
-    setTimeout(() => {
-
-        window.scrollTo({
-            top: 0,
-            behavior: "smooth"
+            { opacity: 0, transform: "translateY(40px)" },
+            { opacity: 1, transform: "translateY(0)" }
+        ], {
+            duration: 1000,
+            fill: "forwards"
         });
 
-    }, 1500);
+        geriSayim();
 
-}, 1000);
-    },600);
+    }, 600);
 });
 
 const hedef = new Date("2026-08-30T20:00:00").getTime();
 
-function geriSayim(){
+function geriSayim() {
 
     const simdi = new Date().getTime();
-
     const fark = hedef - simdi;
 
-    if(fark<=0){
-
-        document.getElementById("sayac").innerHTML="🎉 Bugün Düğünümüz 🎉";
-
+    if (fark <= 0) {
+        document.getElementById("sayac").innerHTML = "🎉 Bugün Düğünümüz 🎉";
         return;
     }
 
-    const gun=Math.floor(fark/(1000*60*60*24));
+    const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+    const saat = Math.floor((fark % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+    const dakika = Math.floor((fark % (1000 * 60 * 60)) / (1000 * 60));
+    const saniye = Math.floor((fark % (1000 * 60)) / 1000);
 
-    const saat=Math.floor((fark%(1000*60*60*24))/(1000*60*60));
-
-    const dakika=Math.floor((fark%(1000*60*60))/(1000*60));
-
-    const saniye=Math.floor((fark%(1000*60))/1000);
-
-    document.getElementById("sayac").innerHTML=
-    gun+" Gün<br>"+
-    saat+" Saat "+
-    dakika+" Dakika "+
-    saniye+" Saniye";
+    document.getElementById("sayac").innerHTML =
+        gun + " Gün<br>" +
+        saat + " Saat " +
+        dakika + " Dakika " +
+        saniye + " Saniye";
 }
 
-setInterval(geriSayim,1000);
+setInterval(geriSayim, 1000);
 
-geriSayim();
-
-
-}
-
-}
-setTimeout(() => {
-
-window.scrollTo({
-top:120,
-behavior:"smooth"
-});
-
-setTimeout(() => {
-
-window.scrollTo({
-top:0,
-behavior:"smooth"
-});
-
-},1200);
-
-},2500);
 const kartlar = document.querySelectorAll(".kart");
 
 const gozlemci = new IntersectionObserver((girisler) => {
@@ -108,25 +65,27 @@ const gozlemci = new IntersectionObserver((girisler) => {
 kartlar.forEach((kart) => {
     gozlemci.observe(kart);
 });
+
 window.addEventListener("scroll", () => {
 
-const yukseklik =
-document.documentElement.scrollHeight -
-document.documentElement.clientHeight;
+    const yukseklik =
+        document.documentElement.scrollHeight -
+        document.documentElement.clientHeight;
 
-const kayma =
-(document.documentElement.scrollTop / yukseklik) * 100;
+    const kayma =
+        (document.documentElement.scrollTop / yukseklik) * 100;
 
-document.getElementById("ilerleme").style.width = kayma + "%";
+    document.getElementById("ilerleme").style.width = kayma + "%";
 
 });
+
 const yukari = document.getElementById("yukari");
 
 window.addEventListener("scroll", () => {
 
-    if(window.scrollY > 300){
+    if (window.scrollY > 300) {
         yukari.style.display = "block";
-    }else{
+    } else {
         yukari.style.display = "none";
     }
 
@@ -135,8 +94,8 @@ window.addEventListener("scroll", () => {
 yukari.addEventListener("click", () => {
 
     window.scrollTo({
-        top:0,
-        behavior:"smooth"
+        top: 0,
+        behavior: "smooth"
     });
 
 });
