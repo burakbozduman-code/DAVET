@@ -95,3 +95,36 @@ color:#d4af37;
 100%{transform:scale(1);}
 
 }
+
+.yildizlar{
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+background-image:
+radial-gradient(white 1px,transparent 1px),
+radial-gradient(#d4af37 1px,transparent 1px);
+background-size:80px 80px,140px 140px;
+opacity:.35;
+animation:yildiz 20s linear infinite;
+}
+
+@keyframes yildiz{
+0%{
+transform:translateY(0);
+}
+100%{
+transform:translateY(150px);
+}
+}
+
+button:hover{
+transform:scale(1.08);
+transition:.4s;
+}
+
+section{
+box-shadow:0 0 25px rgba(212,175,55,.25);
+}
