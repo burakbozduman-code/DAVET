@@ -1,34 +1,57 @@
-const buton = document.getElementById("ac");
-const davet = document.getElementById("davet");
-const loading = document.querySelector(".loading");
+const basla = document.getElementById("basla");
+const loader = document.getElementById("loader");
+const site = document.getElementById("site");
 
-buton.onclick = function () {
-    loading.style.display = "none";
-    davet.style.display = "block";
-}
+site.style.display = "none";
+
+basla.addEventListener("click", () => {
+    loader.style.opacity = "0";
+
+    setTimeout(() => {
+        loader.style.display = "none";
+        site.style.display = "block";
+
+        site.animate([
+            {opacity:0, transform:"translateY(40px)"},
+            {opacity:1, transform:"translateY(0)"}
+        ],{
+            duration:1000,
+            fill:"forwards"
+        });
+
+    },600);
+});
 
 const hedef = new Date("2026-08-30T20:00:00").getTime();
 
-function geriSayim() {
+function geriSayim(){
 
     const simdi = new Date().getTime();
 
     const fark = hedef - simdi;
 
-    const gun = Math.floor(fark / (1000 * 60 * 60 * 24));
+    if(fark<=0){
 
-    const saat = Math.floor((fark % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
+        document.getElementById("sayac").innerHTML="🎉 Bugün Düğünümüz 🎉";
 
-    const dakika = Math.floor((fark % (1000 * 60 * 60)) / (1000 * 60));
+        return;
+    }
 
-    const saniye = Math.floor((fark % (1000 * 60)) / 1000);
+    const gun=Math.floor(fark/(1000*60*60*24));
 
-    document.getElementById("sayac").innerHTML =
-        gun + " Gün " +
-        saat + " Saat " +
-        dakika + " Dakika " +
-        saniye + " Saniye";
+    const saat=Math.floor((fark%(1000*60*60*24))/(1000*60*60));
+
+    const dakika=Math.floor((fark%(1000*60*60))/(1000*60));
+
+    const saniye=Math.floor((fark%(1000*60))/1000);
+
+    document.getElementById("sayac").innerHTML=
+    gun+" Gün<br>"+
+    saat+" Saat "+
+    dakika+" Dakika "+
+    saniye+" Saniye";
 }
 
 setInterval(geriSayim,1000);
+
 geriSayim();
