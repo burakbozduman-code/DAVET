@@ -316,25 +316,7 @@ font-size:13px;
 }
 
 }
-#muzikButon{
-position:fixed;
-right:20px;
-bottom:20px;
-background:#d4af37;
-color:white;
-border:none;
-padding:15px 20px;
-border-radius:50px;
-cursor:pointer;
-font-size:16px;
-z-index:9999;
-box-shadow:0 10px 30px rgba(212,175,55,.4);
-transition:.3s;
-}
 
-#muzikButon:hover{
-transform:scale(1.08);
-}
 .kaydir{
 
 position:absolute;
