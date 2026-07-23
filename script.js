@@ -21,7 +21,7 @@ basla.addEventListener("click", () => {
 setTimeout(() => {
 
     window.scrollTo({
-        top: 250,
+        top: 300,
         behavior: "smooth"
     });
 
@@ -114,3 +114,18 @@ behavior:"smooth"
 },1200);
 
 },2500);
+const kartlar = document.querySelectorAll(".kart");
+
+const gozlemci = new IntersectionObserver((girisler) => {
+    girisler.forEach((giris) => {
+        if (giris.isIntersecting) {
+            giris.target.classList.add("goster");
+        }
+    });
+}, {
+    threshold: 0.2
+});
+
+kartlar.forEach((kart) => {
+    gozlemci.observe(kart);
+});
