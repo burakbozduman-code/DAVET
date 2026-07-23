@@ -427,3 +427,28 @@ transition:all .8s ease;
 opacity:1;
 transform:translateY(0);
 }
+.galeri{
+display:flex;
+overflow-x:auto;
+gap:15px;
+scroll-snap-type:x mandatory;
+padding-top:15px;
+}
+
+.galeri img{
+width:280px;
+height:380px;
+object-fit:cover;
+border-radius:20px;
+scroll-snap-align:center;
+box-shadow:0 10px 30px rgba(0,0,0,.4);
+transition:.4s;
+}
+
+.galeri img:hover{
+transform:scale(1.05);
+}
+
+.galeri::-webkit-scrollbar{
+display:none;
+}
