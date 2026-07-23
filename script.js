@@ -81,3 +81,20 @@ caliyor=false;
 }
 
 }
+setTimeout(() => {
+
+window.scrollTo({
+top:120,
+behavior:"smooth"
+});
+
+setTimeout(() => {
+
+window.scrollTo({
+top:0,
+behavior:"smooth"
+});
+
+},1200);
+
+},2500);
