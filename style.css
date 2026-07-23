@@ -462,3 +462,24 @@ background:linear-gradient(90deg,#d4af37,#fff5b8,#d4af37);
 z-index:99999;
 transition:width .2s;
 }
+#yukari{
+position:fixed;
+right:20px;
+bottom:90px;
+width:50px;
+height:50px;
+border:none;
+border-radius:50%;
+background:#d4af37;
+color:white;
+font-size:22px;
+cursor:pointer;
+display:none;
+z-index:9999;
+box-shadow:0 8px 25px rgba(212,175,55,.4);
+transition:.3s;
+}
+
+#yukari:hover{
+transform:scale(1.1);
+}
