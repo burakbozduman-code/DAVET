@@ -82,6 +82,23 @@ body{
     font-size:58px;
     font-family:'Cormorant Garamond',serif;
     margin-bottom:20px;
+letter-spacing:3px;
+animation:parla 3s infinite;
+@keyframes parla{
+
+0%{
+text-shadow:0 0 10px rgba(212,175,55,.4);
+}
+
+50%{
+text-shadow:0 0 25px rgba(212,175,55,.9);
+}
+
+100%{
+text-shadow:0 0 10px rgba(212,175,55,.4);
+}
+
+}
 }
 
 .hero p{
