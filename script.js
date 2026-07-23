@@ -141,3 +141,23 @@ const kayma =
 document.getElementById("ilerleme").style.width = kayma + "%";
 
 });
+const yukari = document.getElementById("yukari");
+
+window.addEventListener("scroll", () => {
+
+    if(window.scrollY > 300){
+        yukari.style.display = "block";
+    }else{
+        yukari.style.display = "none";
+    }
+
+});
+
+yukari.addEventListener("click", () => {
+
+    window.scrollTo({
+        top:0,
+        behavior:"smooth"
+    });
+
+});
