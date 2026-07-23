@@ -129,3 +129,15 @@ const gozlemci = new IntersectionObserver((girisler) => {
 kartlar.forEach((kart) => {
     gozlemci.observe(kart);
 });
+window.addEventListener("scroll", () => {
+
+const yukseklik =
+document.documentElement.scrollHeight -
+document.documentElement.clientHeight;
+
+const kayma =
+(document.documentElement.scrollTop / yukseklik) * 100;
+
+document.getElementById("ilerleme").style.width = kayma + "%";
+
+});
