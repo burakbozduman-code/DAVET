@@ -452,3 +452,13 @@ transform:scale(1.05);
 .galeri::-webkit-scrollbar{
 display:none;
 }
+#ilerleme{
+position:fixed;
+top:0;
+left:0;
+height:4px;
+width:0%;
+background:linear-gradient(90deg,#d4af37,#fff5b8,#d4af37);
+z-index:99999;
+transition:width .2s;
+}
