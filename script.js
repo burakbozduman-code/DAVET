@@ -18,7 +18,23 @@ basla.addEventListener("click", () => {
             duration:1000,
             fill:"forwards"
         });
+setTimeout(() => {
 
+    window.scrollTo({
+        top: 250,
+        behavior: "smooth"
+    });
+
+    setTimeout(() => {
+
+        window.scrollTo({
+            top: 0,
+            behavior: "smooth"
+        });
+
+    }, 1500);
+
+}, 1000);
     },600);
 });
 
