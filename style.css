@@ -417,3 +417,13 @@ transform:translate(-50%,8px);
 }
 
 }
+.kart{
+opacity:0;
+transform:translateY(60px);
+transition:all .8s ease;
+}
+
+.kart.goster{
+opacity:1;
+transform:translateY(0);
+}
