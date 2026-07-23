@@ -483,3 +483,30 @@ transition:.3s;
 #yukari:hover{
 transform:scale(1.1);
 }
+.kapanis{
+text-align:center;
+padding:60px 30px;
+}
+
+.kapanis h2{
+font-size:42px;
+margin-bottom:20px;
+}
+
+.kapanis p{
+font-size:20px;
+line-height:1.8;
+}
+
+.imza{
+margin-top:30px;
+color:#d4af37;
+font-style:italic;
+}
+
+.kapanis h3{
+margin-top:15px;
+font-size:34px;
+color:#d4af37;
+font-family:'Cormorant Garamond',serif;
+}
