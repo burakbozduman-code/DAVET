@@ -55,3 +55,29 @@ function geriSayim(){
 setInterval(geriSayim,1000);
 
 geriSayim();
+const muzik = document.getElementById("muzik");
+const muzikButon = document.getElementById("muzikButon");
+
+let caliyor = false;
+
+muzikButon.onclick = () => {
+
+if(!caliyor){
+
+muzik.play();
+
+muzikButon.innerHTML="🔇 Müziği Kapat";
+
+caliyor=true;
+
+}else{
+
+muzik.pause();
+
+muzikButon.innerHTML="🎻 Müziği Aç";
+
+caliyor=false;
+
+}
+
+}
