@@ -128,3 +128,14 @@ transition:.4s;
 section{
 box-shadow:0 0 25px rgba(212,175,55,.25);
 }
+h3{
+color:#d4af37;
+font-size:28px;
+margin:15px 0;
+}
+
+section p{
+line-height:1.8;
+font-size:18px;
+margin-top:10px;
+}
